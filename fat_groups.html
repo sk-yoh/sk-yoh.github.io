@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<head>
+    <title>Diet</title>
+    <link rel="stylesheet" href="style/style.css" type="text/css" media="screen"/>
+    <link href='https://fonts.googleapis.com/css?family=Inconsolata' rel='stylesheet' type='text/css'>
+    <meta charset="utf-8">
+</head>
+<body>
+    <div id="main-wrapper">
+        <div id="leftside">
+            <h1>Average Daily Consumption, Per Person</h1>
+            <div id="speedcontrol">
+                <div class="label">Speed</div>
+                <div class="button" data-speed="pause">Pause</div>
+                <div class="button" data-speed="3000">Slow</div>
+                <div class="button current" data-speed="750">Medium</div>
+                <div class="button" data-speed="300">Fast</div>
+            </div>
+        </div>
+        <div id="year">
+            <div class="sublabel">Year</div>
+            <div id="yearvalue" class="valuedesc">1970</div>
+        </div>
+        <div class="clr"></div>
+        <div id="header">
+            <div class="sec">
+                <h3>Fat</h3>
+                Calories
+            </div>
+        </div>
+        <div id="charts"></div>
+    </div>
+    <script src="js/d3-3-5-5.min.js"></script>
+    <script src="js/d3.slider.js"></script>
+		<script type="text/javascript" src="js/fat_groups.js"></script>
+</body>
