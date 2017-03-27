@@ -1,0 +1,41 @@
+img{
+  height:auto;
+  width: 100%;
+  position:fixed;
+  /*top:50%;
+  left:40%;*/
+  top:5%
+  /*margin-left:-300px;
+  margin-top:-300px;*/
+}
+
+html,body{
+  min-height:calc(100vh + 30px);
+  background:black;
+  height:100%;
+  width:100%;
+  color:white;
+  max-width:100%;
+  padding:0px;
+  margin:0px;
+}
+
+.cont{
+    max-width:100%;
+    position: relative;
+    width: 100%;
+    margin: auto;
+    min-height: 100%;
+    height: auto !important;
+    height: 100%;
+    overflow: hidden !important;
+}
+.zwei{
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  font-family: 'Montserrat', sans-serif;
+  letter-spacing:10px;
+  font-size:2em;
+
+}
