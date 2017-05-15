@@ -1,5 +1,5 @@
-var url="http://interactive-ml-guide.herokuapp.com/get_features/"
-var url_train="http://interactive-ml-guide.herokuapp.com/train_svm/"
+var url="https://interactive-ml-guide.herokuapp.com/get_features/"
+var url_train="https://interactive-ml-guide.herokuapp.com/train_svm/"
 var feature1 = "red"
 var feature2 = "blue"
 var view = "plot"
