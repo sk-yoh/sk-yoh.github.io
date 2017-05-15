@@ -1,0 +1,63 @@
+.btn:focus,.btn:active {
+   outline: none !important;
+}
+
+#feature1 {
+    float: left;
+    margin-right: 50px;
+}
+
+#feature2 {
+    float: left;
+    margin-right: 50px;
+}
+
+.chart {
+
+}
+
+.main text {
+font: 10px sans-serif;
+}
+
+.axis line, .axis path {
+shape-rendering: crispEdges;
+stroke: black;
+fill: none;
+}
+
+circle {
+fill: steelblue;
+}
+
+.line {
+  fill: none;
+  stroke: black;
+  stroke-width: 2px;
+}
+
+
+#table-container {
+    width: 800px;
+    height: 400px;
+    overflow-y: scroll;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#deforestation-images {
+    text-align: center;*/
+    float: left;
+    width: 100%;
+}
+
+#non-deforestation-images {
+    text-align: center;
+    float: left;
+    width: 100%;
+}
+
+.image-pair > img {
+    width: 40%;
+    margin-right: 20px;
+}
