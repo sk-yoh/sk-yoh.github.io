@@ -138,8 +138,8 @@ function showClassifiedImages(results) {
     var offset = 15
     for (var i = 0; i < results['test_labels'].length; i++) {
         var imageNumber = offset + i;
-        var beforeImageSrc = "../data/before/" + imageNumber + ".jpg"
-        var afterImageSrc = "../data/after/" + imageNumber + ".jpg"
+        var beforeImageSrc = "https://sk-yoh.github.io/mltutoring512/data/before/" + imageNumber + ".jpg"
+        var afterImageSrc = "https://sk-yoh.github.io/mltutoring512/data/after/" + imageNumber + ".jpg"
         var pred = results['test_labels'][i]
         if (pred == 0) {
             $("#deforestation-images").append(
