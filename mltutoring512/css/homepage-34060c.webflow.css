@@ -124,3 +124,8 @@
 html.w-mod-js *[data-ix="home"] {
   opacity: 0;
 }
+
+#logo {
+    padding-top: 8px;
+    width: 120px;
+}

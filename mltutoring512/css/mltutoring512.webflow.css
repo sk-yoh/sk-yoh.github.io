@@ -1241,3 +1241,8 @@ html.w-mod-js *[data-ix="banneranimation"] {
   -ms-transform: translate(0px, 35px);
   transform: translate(0px, 35px);
 }
+
+#logo {
+    padding-top: 8px;
+    width: 120px;
+}
