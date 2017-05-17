@@ -40,23 +40,54 @@
     </div>
   </div>
   <div>
-    <div class="container-2 w-container" data-ix="home">
+    <div class="w-container" data-ix="home">
       <h1 class="h4">Vision</h1>
-      <p class="p3">To create an interactive machine learning tutorial for novices that provides hands-on learning through practical application.</p>
+      <p class="p3">To create an interactive machine learning tutorial for novices that provides hands-on learning through a practical application on image difference classification.</p>
       <h1 class="h4">Guiding Questions</h1>
-      <p class="p3">How do we help novices approach the problem more like experts?
-<br>
-How can we scaffold novices to do machine learning applications without technical expertise?
-</p>
-
-
-
-
-      <h1 class="h4">How does Machine Learning work?</h1>
-      <p class="p3">The gold standard for whether or not Machine Learning is working is if a computer can classify as well as a human. This means that as we work through our deforestation example, we must evaluate whether or not the machine is seeing and classifying our images as well as a human eye and brain can. This is important, because if a human can’t do classification, how could we expect a computer to be able to?&nbsp;
-        <br> Two major stages in doing Machine Learning is training and testing with our picture data. In the training stage, we will decide the best rules for separating our picture data using labeled examples in a subset of our picture dataset. Essentially, we train our computer using examples that we’ve already labeled. In the testing stage, we will see how well our rules work when they are applied to the new examples that make up the rest of our picture dataset.</p>
-      <h1 class="h4">Where did we get the data?</h1>
-      <p class="p3">Machine Learning requires data. To answer our question about deforestation, we will be using pictures as our data. Our picture data comes from Google Earth. We took screenshots of satellite imagery from Indonesia from the year 2000. Then, we took screenshots of the exact same areas from the year 2015. This way, we were able to capture change over time.</p>
+      <p class="p3">In our project, we were guided by a few questions that we wanted to answer:</p>
+      <ol>
+          <li><p class="p3">How do we help novices approach the problem more like experts?</p></li>
+          <li><p class="p3">How can we scaffold novices to do machine learning applications without technical expertise?</p></li>
+      </ol>
+      <h1 class="h4">Goals</h1>
+      <p class="p3">To achieve our vision and answer our guiding questions, we came up with a few actionable goals for our project:</p>
+      <ul>
+          <li><p class=p3>Develop a guided tutorial to explain the machine learning process to novices (Tutorial Mode)</p></li>
+          <li><p class=p3>Provide an interactive platform for non-techincal users who want to apply machine learning to their own image difference classification problems (Build a Classifier Mode)</p></li>
+          <li><p class=p3>Scaffold users with instructive graphics and visualizations to make machine learning more intuitive and less like a black-box</p></li>
+      </ul>
+      <h1 class="h4">Sources</h1>
+      <p class="p3">In our tutorial mode, we provided users with a sample dataset on deforestation. Deforestation is an appropriate dataset for this application because it is inherently about image differences (which our tutorial and application focused on). By looking at the satellite images of the same region from two seperate years, you can tell if deforestation had happened within that time period. For instance, the images below (from 2000 and 2015) show evidence of deforestation in an area in Indonesia:</p>
+      <div id="before-after-images">
+          <figure id="before-image">
+              <img src="images/Snip20170506_9.png">
+              <figcaption>2000</figcaption>
+          </figure>
+          <figure id="after-image" >
+              <img src="images/Snip20170506_11.png">
+              <figcaption>2015</figcaption>
+          </figure>
+      </div>
+      <br>
+      <p class="p3">To collect this historical satellite imagery data, we used Google Earth. We took screenshots of 100-square-mile regions in Indonesia, a country that is notorious for the deforestation of its rainforests. Specifically, we took two screenshots of the same area, one from the year 2000 and another from 2015. We did this for 25 seperate areas, getting 25 pairs of before and after images.</p>
+      <p class="p3">Since we collected this data ourselves, concerns about data quality were mitigated:</p>
+      <ul>
+          <li><p class="p3"><b>Completeness</b> of the data was completely (no pun intended) in our hands, and we ensured that our small dataset was complete with all the pairs of before and after images.</p></li> <li><p class="p3">Since these images were taken by Google Earth's image providers using state-of-the-art satellite technology, we were not concerned about <b>accountability</b>. For the resolution that we needed, these were reliable images.</p></li>
+          <li><p class="p3">We were very careful during data collection and cleaning to ensure <b>coherence</b> and <b>correctness</b>. To ensure coherence, we took before-and-after screenshots of exactly the same patch of area from the exact same altitude. To ensure correctness, we tried our best to ensure that there were no non-deforestation disturbances in the images (i.e. clouds, changes in rivers) that our simple classifier would misclassify as deforestation.</p></li>
+      </ul>
+      <h1 class="h4">Approach</h1>
+      <p class="p3">Broadly, we approached this project in a few stages:</p>
+      <ol>
+          <li><p class=p3>Contextual Inquiry (Novices): We interviewed novices and learned how they approached an image difference classification problem on deforestation. We figured out what they did and did not know about machine learning. From this, we identified gaps in knowledge that we could focus our instruction on.</p></li>
+          <li><p class=p3>Contextual Inquiry (Experts): We interviewed two experienced machine learning developers on our team to learn how they tackled the same problem. We compared and contrasted their approach from the approach of the novices.</p></li>
+          <li><p class=p3>Instructional Design: Using our insights from the contextual inquires, we drafted a narrative to explain the machine learning process to non-technical, novice users. This narrative would go in our "Tutorial" section.</p></li>
+          <li><p class=p3>User Interface Design: We desgned an intuitive UI, filled with instructional GIFs and visualizations to explain what was happening in each stage of the machine learning process. We did this for both the "Tutorial" and "Build a Classifier" sections.</p></li>
+          <li><p class=p3>Back-end: We built a back-end to do classification on a generic image difference problem. We hosted a web server on Heroku to perform feature generation, training, and testing using a user-provided dataset.</p></li>
+          <li><p class=p3>Front-end: We developed a front-end tutorial and image classification platform (using only the deforestation data) that interfaced with our back-end on Heroku.</p></li>
+      </ol>
+      <p class=p3>The slides below detail our approach in planning and implementing this project:</p>
+      <iframe src="https://docs.google.com/presentation/d/1hGNzWDvXL96gBusJvNK43l8nfZL0BW8vXfgt-EJ-0EE/embed?start=false&loop=true&delayms=5000" frameborder="0" width="960" height="569" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
+      <br><br><br>
     </div>
   </div>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js" type="text/javascript"></script>
