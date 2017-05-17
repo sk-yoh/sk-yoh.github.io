@@ -52,7 +52,7 @@
     <div class="dldata">
       <div class="container-7 w-container">
         <h3 class="h4">Which do you think can detect image difference best: you or a computer?</h3>
-        <p class="p3" width="224">Say you were a environmentalist trying to detect deforestation using historical satellite imagery. Imagine what could happen if computers could detect and predict when, where, and how fast deforestation was happening. This is possible through Machine Learning. Machine Learning is how computers can learn rules and patterns from data to make predictions about new data.&nbsp;
+        <p class="p3" width="224">Say you were an environmentalist trying to detect deforestation using historical satellite imagery. Imagine what could happen if computers could detect and predict when, where, and how fast deforestation was happening. This is possible through Machine Learning. Machine Learning is how computers can learn rules and patterns from data to make predictions about new data.&nbsp;
           <br>
           <br> Can a computer use machine learning to be able to tell if deforestation is happening in different areas in Indonesia? Let’s use a tutorial to learn how to use Machine Learning to answer this question.
           <br><br>
@@ -60,9 +60,6 @@
           <p class="p3" width="224">Machine learning uses labeled examples to learn the best rules for separating data into classes (in this case deforestation and non-deforestation). Two major stages in Machine Learning are training and testing. In the training stage, we will train our computer using a subset of our picture dataset that we have already labeled. This will produce a model, which will make predictions on new examples. In the testing stage, we will see how well the model performs when it has to make predictions on unseen data.&nbsp;
             <br>
             <br> As we work through our deforestation example, we will evaluate whether or not the computer can classify our images as well as we can. This is important because we want to ensure that the computer is making accurate predictions compared to ones made by a human.
-
-            <br><br>
-            <a class="button w-button" href="#">Download</a>
       </div>
     </div>
   </div>
@@ -180,7 +177,9 @@
               <div class="operation-meta">
                 <div class="ofloatleft">
                   <h2 class="oph1">Step 2: Calculate Differences Between Before and After Image Pairs.</h2>
-                  <p class="p3">The way we can tell if deforestation has occurred is by examining the difference in the “before” 2000 pictures and their corresponding “after” 2015 pictures in the picture pairs. For our tutorial, let’s use the difference in white color between the before and after pictures as our feature. Perhaps more white indicates less trees and plants. Therefore, for each matching pair, we will subtract the 2015 white value from our RGB conversion from the 2000 white value. By looking at the difference, we are looking at change over time. Don’t worry about how we got the white value from the RGB value. That is a more advanced concept that we will skip for today.&nbsp;
+                  <p class="p3">Computers view pictures as numbers, which are represented as RGB values. RGB values are numbers for red ( R ), green (G), and blue (B) values that tell a computer which color to display. Therefore, we first need to convert our pictures into RGB values.
+                  <br><br>
+                  The way we can tell if deforestation has occurred is by examining the difference in the “before” 2000 pictures and their corresponding “after” 2015 pictures in the picture pairs. For our tutorial, one way we can do this is by seeing if there are differences in the red, green, or blue coloration (RGB values).
                     <br>
                     <br> To do this, select which image pair you want to work with on the right hand side. We will demonstrate below using an example.</p>
                 </div>
@@ -272,8 +271,12 @@
               <div class="operation-meta">
                 <div class="ofloatleft">
                   <h2 class="oph1">Step 3: Select Useful features</h2>
-                  <p class="p3">Computers view pictures as numbers, which are represented as RGB values. RGB values are numbers for red ( R ), green (G), and blue (B) values that tell a computer which color to display. Therefore, we first need to convert our pictures into RGB values.
-<br><br>The way we can tell if deforestation has occurred is by examining the difference in the “before” 2000 pictures and their corresponding “after” 2015 pictures in the picture pairs. For our tutorial, one way we can do this is by seeing if there are differences in the red, green, or blue coloration (RGB values). </p>
+                  <p class="p3">A feature is a Machine Learning word for characteristic. Computers categorize data into different classes by reading data’s different features. Let’s pick two out of our three R, G, and B difference options. For each matching pair, we will subtract the 2015 image from our 2000 image. By looking at the difference, we are observing change over time.
+<br><br>
+Take a look at the plot that resulted from your features. All the red dots belong to the deforestation class. All the blue dots belong to non-deforestation.
+<br><br>
+The best case scenario as we look at the plot would be if there was perfect separation between the blue dots and the red dots. This would mean that the features we selected did a perfect job at separating our two different classes. What do you think of the plot? If you are unhappy with the separation, then you can go back to the feature tabs and try selecting other features until you are satisfied.
+</p>
                 </div>
               </div>
               <div class="ttpanel"><img src="gif/FeatureEva_v2.gif" width="100%">
@@ -403,7 +406,7 @@
               <div class="operation-meta">
                 <div class="ofloatleft">
                   <h2 class="oph1">Step 4: Train Your Model</h2>
-                  <p class="p3">After you have a good enough threshold, we can move on the train the model and test it.&nbsp; Creating the model and test on the testing set.</p>
+                  <p class="p3">A model is a set of rules to help separate the two classes we are interested in, and it takes into account the features we selected. It is used for predicting the class of a new, unseen example. The model is represented by a decision boundary, which in our plot, is the line that separates the deforestation and non-deforestation classes. After you are happy with the features you selected, we can move on to train the model on the training data. Try training a model yourself on the right by clicking the Train button.</p>
                 </div>
               </div>
               <div class="ttpanel"><img src="gif/Training.gif" width="100%">
@@ -441,7 +444,7 @@
               <div class="operation-meta">
                 <div class="ofloatleft">
                   <h2 class="oph1">Step 5: Test Your Model</h2>
-                  <p class="p3">After you have a good enough threshold, we can move on the train the model and test it.&nbsp; Creating the model and test on the testing set.</p>
+                  <p class="p3">In order to see how well the model we just trained performs, we will test it on the testing data. Try testing yourself on the right by clicking the Test button.</p>
                 </div>
               </div>
               <div class="ttpanel"><img src="gif/Testing.gif" width="100%">
