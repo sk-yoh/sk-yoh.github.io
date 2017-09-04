@@ -1,0 +1,192 @@
+@import url(http://fonts.googleapis.com/css?family=Roboto:300);
+.tab {
+  padding-top: 50px;
+  margin-bottom: 20px;
+  position: relative;
+  overflow: hidden;
+  background: #fff;
+  width: 100%;
+  margin: 0 auto;
+  font-family: 'Roboto', sans-serif;
+  line-height: 1.5;
+  font-weight: 300;
+  color: #888;
+  -webkit-font-smoothing: antialiased;
+}
+
+.tabs {
+  display: table;
+  position: relative;
+  overflow: hidden;
+  margin: 0 auto;
+  width: 75%;
+}
+.tabs li {
+  float: left;
+  line-height: 38px;
+  overflow: hidden;
+  padding: 0;
+  position: relative;
+}
+.tabs a {
+  /*background-color: #eff0f2;*/
+  border-bottom: 1px solid #fff;
+  color: #888;
+  font-weight: 500;
+  display: block;
+  letter-spacing: 0;
+  outline: none;
+  padding: 0 20px;
+  text-decoration: none;
+  -webkit-transition: all 0.2s ease-in-out;
+  -moz-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+  /*border-bottom: 2px solid #87d3b7;*/
+}
+
+.tabs a#fruit{
+  border-bottom: 2px solid #f8a68d;
+
+}
+
+.tabs a#vege{
+  border-bottom: 2px solid #a4d5a6;
+
+}
+
+.tabs a#meat{
+  border-bottom: 2px solid #e37e95;
+
+}
+
+.tabs a#grain{
+  border-bottom: 2px solid #fdefa3;
+
+}
+
+.tabs a#fat{
+  border-bottom: 2px solid #bba7fd;
+}
+
+.tabs a#dairy{
+  border-bottom: 2px solid #99daf2;
+}
+
+.tabs a#sugar{
+  border-bottom: 2px solid #8cdcd9;
+}
+
+.tabs_item {
+  display: none;
+  padding: 30px 0;
+}
+.tabs_item h4 {
+  font-weight: bold;
+  color: #87d3b7;
+  font-size: 20px;
+}
+.tabs_item img {
+  width: 200px;
+  float: left;
+  margin-right: 30px;
+}
+.tabs_item:first-child {
+  display: block;
+}
+
+.tabs_text {
+  padding-top: 0px;
+  margin-bottom: 0px;
+  position: relative;
+  overflow: hidden;
+  background: #fff;
+  width: 60%;
+  margin: 0 auto;
+  font-family: 'Roboto', sans-serif;
+  line-height: 1.5;
+  font-weight: 300;
+  color: #888;
+  -webkit-font-smoothing: antialiased;
+}
+
+
+/*.current a {
+  color: #fff;
+  background: #87d3b7;
+}*/
+
+.current a#fruit{
+  color: #fff;
+  background: #f8a68d;
+}
+
+.current a#vege{
+  color: #fff;
+  background: #a4d5a6;
+}
+
+.current a#meat{
+  color: #fff;
+  background: #e37e95;
+}
+
+.current a#grain{
+  color: #fff;
+  background: #fdefa3;
+}
+
+.current a#fat{
+  color: #fff;
+  background: #bba7fd;
+}
+
+.current a#dairy{
+  color: #fff;
+  background: #99daf2;
+}
+
+.current a#sugar{
+  color: #fff;
+  background: #8cdcd9;
+}
+
+.notes {
+  width: 40%;
+  margin: 0 auto;
+  position: relative;
+}
+.blocks {
+  float: left;
+  width: 15px;
+  height: 15px;
+  margin: 5px;
+
+}
+
+.notes .fruit {
+  background:#f8a68d;
+}
+
+.notes .vege {
+  background:#a4d5a6;
+}
+
+.notes .meat {
+  background:#e37e95;
+}
+
+.notes .grain {
+  background:#fdefa3;
+}
+
+.notes .fat {
+  background:#bba7fd;
+}
+
+.notes .dairy {
+  background:#99daf2;
+}
+
+.notes .sugar {
+  background:#8cdcd9;
+}
