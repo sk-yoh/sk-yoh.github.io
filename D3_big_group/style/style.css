@@ -1,0 +1,500 @@
+html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,embed,figure,figcaption,footer,header,hgroup,menu,nav,output,ruby,section,summary,time,mark,audio,video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+
+article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section {
+    display: block;
+}
+
+body {
+    line-height: 1;
+}
+
+ol,ul {
+    list-style: none;
+}
+
+blockquote,q {
+    quotes: none;
+}
+
+blockquote:before,blockquote:after,q:before,q:after {
+    content: '';
+    content: none;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+body {
+    font-family: 'Inconsolata',Monaco,"Lucida Console",Consolas,"Courier New";
+}
+
+#main-wrapper {
+    width: 60%;
+    margin: 10px auto;
+}
+
+#leftside {
+    width: 700px;
+    float: left;
+}
+
+#charts {
+    position: absolute;
+    top: 140px;
+}
+
+h1 {
+    font-family: 'Inconsolata',Monaco,"Lucida Console",Consolas,"Courier New";
+    font-size: 24px;
+    font-style: normal;
+    text-transform: uppercase;
+    margin: 0 0 18px 15px;
+}
+
+h3 {
+    text-transform: uppercase;
+    font-size: 1.5em;
+    padding: 3px 0px;
+    margin: -5px 0 0px 0;
+    font-style: normal;
+}
+
+.centered {
+    text-align: center;
+    color: #999;
+    font-size: 0.8em;
+    text-transform: uppercase;
+}
+
+.clr {
+    clear: both;
+}
+
+#leftside .label {
+    text-transform: uppercase;
+    float: left;
+    margin: 3px 8px 0 0;
+}
+
+#speedcontrol {
+    width: 300px;
+    margin: 0px 20px 0 15px;
+    float: left;
+}
+
+#scalecontrol {
+    width: 230px;
+    margin: 0 20px 0 15px;
+    float: left;
+}
+
+.button {
+    width: 50px;
+    padding: 4px;
+    cursor: pointer;
+    text-align: center;
+    font-size: 13px;
+    border: 1px solid #e0e0e0;
+    float: left;
+}
+
+.button:hover {
+    background: #e0e0e0;
+}
+
+.button.current {
+    background: #000;
+    color: #fff;
+}
+
+svg {
+    font: 14px 'Inconsolata',Monaco,"Lucida Console",Consolas,"Courier New";
+    position: absolute;
+    display: block;
+}
+
+
+
+text.descrip tspan {
+    font-size: 1em;
+}
+
+.axis {
+    font-size: 12px;
+}
+
+.axis path,.axis line {
+    fill: none;
+    stroke: #000;
+    shape-rendering: crispEdges;
+}
+
+.x.axis path {
+    display: none;
+}
+
+.y.axis path {
+    display: none;
+}
+
+.baseline line {
+    stroke: #000;
+    stroke-width: 2px;
+}
+
+.line {
+    fill: none;
+    stroke: #000;
+    stroke-width: 1px;
+}
+
+/*start revising line*/
+.meat .line {
+
+  fill: none;
+  stroke: #ec3a64;
+  stroke-width: 1.5px;
+}
+
+.veg .line {
+
+  fill: none;
+  stroke: #4caf50;
+  stroke-width: 1.5px;
+}
+
+.fruit .line {
+
+  fill: none;
+  stroke: #f4511e;;
+  stroke-width: 1.5px;
+}
+
+.grain .line {
+
+  fill: none;
+  stroke: #ffe34a;
+  stroke-width: 1.5px;
+}
+
+.dairy .line {
+
+  fill: none;
+  stroke: #37b9e9;
+  stroke-width: 1.5px;
+}
+
+.fat .line {
+
+  fill: none;
+  stroke: #7b52ff;
+  stroke-width: 1.5px;
+}
+
+.sugar .line {
+
+  fill: none;
+  stroke: #1cbdb6;
+  stroke-width: 1.5px;
+}
+
+
+
+
+
+.area {
+    /*fill: steelblue;*/
+    fill: none;
+}
+#high.grain .area {
+  opacity: 0.5;
+  fill: #ffe34a;
+}
+
+
+#high.meat .area {
+  opacity: 0.5;
+  fill: #ec3a64;
+}
+
+#high.veg .area {
+  opacity: 0.5;
+  fill: #4caf50;
+}
+#high.dairy .area {
+  opacity: 0.5;
+  fill: #37b9e9;
+}
+
+#high.fat .area {
+  opacity: 0.5;
+  fill: #7b52ff;
+}
+
+#high.sugar .area {
+  opacity: 0.5;
+  fill: #1cbdb6;
+}
+
+
+#high.fruit .area {
+  opacity: 0.5;
+  fill: #f4511e;
+}
+
+#high .line{
+
+  stroke: none;
+}
+#high .foodname{
+  fill: none;
+}
+
+#low .area{
+  /*opacity: :0.8;*/
+  fill: #fafafa;
+}
+#low .line{
+  stroke: none;
+
+}
+
+#low .foodname{
+  fill: none;
+
+}
+
+
+
+/*.meat .area:first {
+    fill: #ec3a64;
+}*/
+/*
+.veg .area {
+    fill: #8DC63F;
+}
+
+.fruit .area {
+    fill: #ff0f9d;
+}
+
+.grain .area {
+    fill: #F68D3D;
+}
+
+.dairy .area {
+    fill: #009EFF;
+}
+
+.fat .area {
+    fill: #FFCD31;
+}*/
+
+.overlay {
+    fill: none;
+    /*fill: #f0f0f0;*/
+    pointer-events: all;
+    z-index: 1;
+}
+
+#year {
+    float: right;
+    margin-right: 10px;
+    text-align: right;
+}
+
+#year .sublabel {
+    margin-right: 7px;
+    text-transform: uppercase;
+    font-size: 16px;
+}
+
+#yearvalue {
+    font-size: 57px;
+    margin-bottom: 18px;
+}
+
+#header {
+    margin-top: 5px;
+    margin-left:40%;
+
+}
+
+#header .sec {
+    float: left;
+    width: 177px;
+    text-align: center;
+    font-style: italic;
+    font-size: 16px;
+}
+
+.desc {
+    font-family: "Mercury SSm A","Mercury SSm B";
+    font-style: italic;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 1.4em;
+}
+
+.focus text {
+    font-size: 11px;
+}
+
+line.annotation {
+    stroke: #ccc;
+    stroke-dasharray: 5,2;
+    stroke-width: 1.2px;
+}
+
+text.annotation,#line-chart .agehighlight text {
+    font-family: 'Inconsolata',Monaco,"Lucida Console",Consolas,"Courier New";
+    font-size: 14px;
+    fill: #444;
+    text-anchor: end;
+}
+
+text.descrip {
+    font-family: "Mercury SSm A","Mercury SSm B";
+    font-style: italic;
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 1.4em;
+}
+
+.chartbg {
+    fill: none;
+}
+#high .chartbg{
+  opacity: 0.3;
+  fill: #f0f0f0;
+}
+
+#MeatGroups .chartbg {
+    fill: #f0f0f0;
+    opacity: 0.3;
+}
+
+
+/*switch style*/
+@charset "utf-8";
+/* CSS Document */
+
+/* ---------- GENERAL ---------- */
+
+/*body {
+	background: #4a4a4a;
+	color: #151515;
+	font: 100%/1.5em "Lato", sans-serif;
+	margin: 0;
+}*/
+
+input {
+    font-family: inherit;
+    font-size: 100%;
+    line-height: normal;
+    margin: 0;
+}
+
+input[type="radio"] {
+    box-sizing: border-box;
+    padding: 0;
+}
+
+/* ---------- SWITCH ---------- */
+
+.container {
+	height: 64px;
+	left: 50%;
+	margin: -32px 0 0 -80px;
+	position: absolute;
+	top: 50%;
+	width: 80px;
+}
+
+.switch {
+	background: #eee;
+	border-radius: 32px;
+	display: block;
+	height: 32px;
+	position: relative;
+	width: 80px;
+}
+
+.switch label {
+	color: #eee;
+	font-size: 24px;
+	font-weight: 150px;
+	line-height: 32px;
+	text-transform: uppercase;
+	-webkit-transition: color .2s ease;
+	-moz-transition: color .2s ease;
+	-ms-transition: color .2s ease;
+	-o-transition: color .2s ease;
+	transition: color .2s ease;
+	width: 100px;
+}
+
+.switch label:nth-of-type(1) {
+	left: -130%;
+	position: absolute;
+	text-align: right;
+}
+
+.switch label:nth-of-type(2) {
+	position: absolute;
+  right: -130%;
+	text-align: left;
+}
+
+.switch input {
+	height: 32px;
+	left: 0;
+	opacity: 0;
+	position: absolute;
+	top: 0;
+	width: 80px;
+	z-index: 2;
+}
+
+.switch input:checked~label:nth-of-type(1) { color: #808080; }
+.switch input:checked~label:nth-of-type(2) { color: #fff; }
+
+.switch input~:checked~label:nth-of-type(1) { color: #fff; }
+.switch input~:checked~label:nth-of-type(2) { color: #808080; }
+
+.switch input:checked~.toggle {
+	left: 4px;
+}
+
+.switch input~:checked~.toggle {
+	left: 50px;
+}
+
+.switch input:checked {
+	z-index: 0;
+}
+
+.toggle {
+	background: #4a4a4a;
+	border-radius: 50%;
+	height: 27px;
+	left: 0;
+	position: absolute;
+	top: 4px;
+	-webkit-transition: left .2s ease;
+	-moz-transition: left .2s ease;
+	-ms-transition: left .2s ease;
+	-o-transition: left .2s ease;
+	transition: left .2s ease;
+	width: 27px;
+	z-index: 1;
+}

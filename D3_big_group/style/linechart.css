@@ -1,0 +1,128 @@
+element.style {
+}
+
+<style>…</style>
+#food-interactive.time-interactive svg {
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+}
+<style>…</style>
+.time-interactive svg {
+    overflow: hidden;
+}
+main-4a4beb6….css:1
+svg:not(:root) {
+    overflow: hidden;
+}
+(index):2
+svg:not(:root) {
+    overflow: hidden;
+}
+main-4a4beb6….css:1
+*, :after, :before {
+    box-sizing: inherit;
+}
+(index):2
+*, :after, :before {
+    box-sizing: inherit;
+}
+svg[Attributes Style] {
+    width: 608.328;
+    height: 184.342;
+}
+user agent stylesheet
+html|* > svg {
+    transform-origin: 50% 50% 0px;
+}
+user agent stylesheet
+svg:not(:root), symbol, image, marker, pattern, foreignObject {
+    overflow: hidden;
+}
+user agent stylesheet
+* {
+    transform-origin: 0px 0px 0px;
+}
+Inherited from div#food-interactive.time-interactive
+<style>…</style>
+.time-interactive {
+    width: 100%;
+    font-family: franklin-gothic-urw,Helvetica,Arial,sans-serif;
+    font-size: 16px;
+}
+Inherited from body
+main-4a4beb6….css:1
+body {
+    line-height: 1;
+    -webkit-font-smoothing: subpixel-antialiased;
+}
+main-4a4beb6….css:1
+body {
+    padding: 0;
+    margin: 0;
+    font-family: Helvetica Neue,Helvetica,Roboto,Arial,sans-serif;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #0a0a0a;
+    background: #fefefe;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+(index):2
+body {
+    line-height: 1;
+    -webkit-font-smoothing: subpixel-antialiased;
+}
+(index):2
+body {
+    padding: 0;
+    margin: 0;
+    font-family: Helvetica Neue,Helvetica,Roboto,Arial,sans-serif;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #0a0a0a;
+    background: #fefefe;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+Inherited from html.gr__time_com
+main-4a4beb6….css:1
+html {
+    font-size: 100%;
+    box-sizing: border-box;
+}
+main-4a4beb6….css:1
+html {
+    font-family: sans-serif;
+    -ms-text-size-adjust: 100%;
+    -webkit-text-size-adjust: 100%;
+}
+(index):2
+html {
+    font-size: 100%;
+    box-sizing: border-box;
+}
+(index):2
+html {
+    font-family: sans-serif;
+    -ms-text-size-adjust: 100%;
+    -webkit-text-size-adjust: 100%;
+}
+Pseudo ::before element
+main-4a4beb6….css:1
+*, :after, :before {
+    box-sizing: inherit;
+}
+(index):2
+*, :after, :before {
+    box-sizing: inherit;
+}
+Pseudo ::after element
+main-4a4beb6….css:1
+*, :after, :before {
+    box-sizing: inherit;
+}
+(index):2
+*, :after, :before {
+    box-sizing: inherit;
+}
