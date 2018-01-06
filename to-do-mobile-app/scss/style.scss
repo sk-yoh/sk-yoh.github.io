@@ -1,0 +1,231 @@
+@import url(https://fonts.googleapis.com/css?family=Roboto:400,100,300,500,700,900);
+
+html, body, * {
+	font-family: 'Roboto', sans-serif;
+	box-sizing: border-box;
+	padding: 0;
+	margin: 0;
+}
+
+/* Main Style */
+.doc {
+	width: 100%;
+	min-height: 100vh;
+	background: #585F69;
+	.container {
+		width: 400px;
+		margin: 0 auto;
+		padding: 30px 0;
+		.main#app {
+			position: relative;
+			background: white;
+			overflow: hidden;
+			border-radius: 5px;
+			box-shadow: 0 0 50px 10px rgba(0,0,0,0.2);
+			.header {
+				height: 80px;
+				background: #e2e2e2;
+				.nav {
+					float: left;
+					display: inline-block;
+					height: 80px;
+					padding: 32px 30px;
+					#button {
+						cursor: pointer;
+						.line {
+							height: 2px;
+							border-radius: 1px;
+							width: 20px;
+							background: #BBB;
+							margin-bottom: 4px;
+						}
+					}
+				}
+				.dropdown {
+					float: left;
+					color: #999;
+					height: 80px;
+					padding: 30px 0;
+					#dropdown-button {
+						cursor: pointer;
+						margin: 0;
+					}
+				}
+			}
+			#list {
+				list-style: none;
+				margin: 0;
+				padding: 0;
+				height: 500px;
+				overflow-y: auto;
+				overflow-x: hidden;
+				&::-webkit-scrollbar {
+					width: 15px;
+				}
+
+				&::-webkit-scrollbar-track {
+					background: #F2F2F2;
+				}
+
+				&::-webkit-scrollbar-thumb {
+					background-color: darkgrey;
+				}
+				li {
+					&.toggled {
+						transform: translateX(50%);
+						background: #F2F2F2;
+						margin-left: 0;
+						&:before {
+							width: 0;
+						}
+					}
+					position: relative;
+					height: 100px;
+					&:before {
+						content: "";
+						position: absolute;
+						left: 0;
+						top: 0;
+						height: 100px;
+						width: 10px;
+						background: #f39c12;
+						opacity: 1;
+						transition: .35s ease;
+					}
+					&:nth-child(odd) {
+						&:before {
+							background: #d35400;
+						}
+					}
+					transition: .35s ease;
+					.btn-group {
+						position: absolute;
+						left: -200px;
+						width: 200px;
+						height: 100px;
+						.done, .remove {
+							height: 100px;
+							width: 100px;
+							float: left;
+							cursor: pointer;
+							transition: .1s;
+							span {
+								line-height: 100px;
+								width: 100px;
+								text-align: center;
+								color: white;
+								font-size: 2em;
+								text-shadow: 0 0 5px rgba(0,0,0,.4);
+							}
+						}
+						.done {
+							background: #3498db;
+							&:active {
+								background: #2e8ece;
+							}
+						}
+						.remove {
+							background: #e74c3c;
+							&:active {
+								background: #c0392b;
+							}
+						}
+					}
+					.desc {
+						cursor: pointer;
+						padding-left: 80px;
+						padding-top: 29px;
+						height: 100px;
+						background: white;
+						//border-bottom: 1px solid #CCC;
+						.title {
+							display: block;
+							font-size: 1.2em;
+						}
+						.type {
+							display: block;
+							color: #999;
+						}
+					}
+				}
+			}
+			.bottom {
+				display: block;
+				height: 60px;
+				background: #e2e2e2;
+				.add-menu {
+					position: absolute;
+					width: 400px;
+					height: 220px;
+					background: #e2e2e2;
+					bottom: -160px;
+					transition: .35s;
+					.add {
+						padding: 20px;
+						float: right;
+						#button {
+							position: relative;
+							height: 20px;
+							width: 20px;
+							cursor: pointer;
+							&:before, &:after {
+								content: "";
+								position: absolute;
+								background: #BBB;
+								transition: .35s;
+							}
+							&:before {
+								width: 2px;
+								height: 20px;
+								top: 0;
+								left: 9px;
+							}
+							&:after {
+								width: 20px;
+								height: 2px;
+								top: 9px;
+								left: 0;
+							}
+						}
+					}
+					&.toggled {
+						bottom: 0;
+						.add {
+							#button {
+								&:after, &:before {
+									transform: rotate(45deg);
+								}
+							}
+						}
+					}
+					h3 {
+						color: #777;
+						margin: 15px 30px;
+						line-height: 30px;
+					}
+					input {
+						width: 340px;
+						padding: 5px;
+						margin: 30px;
+						margin-top: 0;
+						margin-bottom: 20px;
+						font-size: 1.2em;
+						font-weight: 300;
+						outline: 0;
+						border: 1px solid #CCC;
+						border-radius: 4px;
+						color: #777;
+					}
+					button#add {
+						float: right;
+						margin: 0 30px;
+						background: none;
+						outline: 0;
+						border: 0;
+						color: #777;
+					}
+				}
+			}
+		}
+	}
+}

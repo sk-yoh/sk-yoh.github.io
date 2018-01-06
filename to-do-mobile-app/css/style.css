@@ -1,0 +1,221 @@
+@import url(https://fonts.googleapis.com/css?family=Roboto:400,100,300,500,700,900);
+html, body, * {
+  font-family: 'Roboto', sans-serif;
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+/* Main Style */
+.doc {
+  width: 100%;
+  min-height: 100vh;
+  background: #585F69;
+}
+.doc .container {
+  width: 400px;
+  margin: 0 auto;
+  padding: 30px 0;
+}
+.doc .container .main#app {
+  position: relative;
+  background: white;
+  overflow: hidden;
+  border-radius: 5px;
+  box-shadow: 0 0 50px 10px rgba(0, 0, 0, 0.2);
+}
+.doc .container .main#app .header {
+  height: 80px;
+  background: #e2e2e2;
+}
+.doc .container .main#app .header .nav {
+  float: left;
+  display: inline-block;
+  height: 80px;
+  padding: 32px 30px;
+}
+.doc .container .main#app .header .nav #button {
+  cursor: pointer;
+}
+.doc .container .main#app .header .nav #button .line {
+  height: 2px;
+  border-radius: 1px;
+  width: 20px;
+  background: #BBB;
+  margin-bottom: 4px;
+}
+.doc .container .main#app .header .dropdown {
+  float: left;
+  color: #999;
+  height: 80px;
+  padding: 30px 0;
+}
+.doc .container .main#app .header .dropdown #dropdown-button {
+  cursor: pointer;
+  margin: 0;
+}
+.doc .container .main#app #list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  height: 500px;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+.doc .container .main#app #list::-webkit-scrollbar {
+  width: 15px;
+}
+.doc .container .main#app #list::-webkit-scrollbar-track {
+  background: #F2F2F2;
+}
+.doc .container .main#app #list::-webkit-scrollbar-thumb {
+  background-color: darkgrey;
+}
+.doc .container .main#app #list li {
+  position: relative;
+  height: 100px;
+  transition: .35s ease;
+}
+.doc .container .main#app #list li.toggled {
+  transform: translateX(50%);
+  background: #F2F2F2;
+  margin-left: 0;
+}
+.doc .container .main#app #list li.toggled:before {
+  width: 0;
+}
+.doc .container .main#app #list li:before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100px;
+  width: 10px;
+  background: #f39c12;
+  opacity: 1;
+  transition: .35s ease;
+}
+.doc .container .main#app #list li:nth-child(odd):before {
+  background: #d35400;
+}
+.doc .container .main#app #list li .btn-group {
+  position: absolute;
+  left: -200px;
+  width: 200px;
+  height: 100px;
+}
+.doc .container .main#app #list li .btn-group .done, .doc .container .main#app #list li .btn-group .remove {
+  height: 100px;
+  width: 100px;
+  float: left;
+  cursor: pointer;
+  transition: .1s;
+}
+.doc .container .main#app #list li .btn-group .done span, .doc .container .main#app #list li .btn-group .remove span {
+  line-height: 100px;
+  width: 100px;
+  text-align: center;
+  color: white;
+  font-size: 2em;
+  text-shadow: 0 0 5px rgba(0, 0, 0, 0.4);
+}
+.doc .container .main#app #list li .btn-group .done {
+  background: #3498db;
+}
+.doc .container .main#app #list li .btn-group .done:active {
+  background: #2e8ece;
+}
+.doc .container .main#app #list li .btn-group .remove {
+  background: #e74c3c;
+}
+.doc .container .main#app #list li .btn-group .remove:active {
+  background: #c0392b;
+}
+.doc .container .main#app #list li .desc {
+  cursor: pointer;
+  padding-left: 80px;
+  padding-top: 29px;
+  height: 100px;
+  background: white;
+}
+.doc .container .main#app #list li .desc .title {
+  display: block;
+  font-size: 1.2em;
+}
+.doc .container .main#app #list li .desc .type {
+  display: block;
+  color: #999;
+}
+.doc .container .main#app .bottom {
+  display: block;
+  height: 60px;
+  background: #e2e2e2;
+}
+.doc .container .main#app .bottom .add-menu {
+  position: absolute;
+  width: 400px;
+  height: 220px;
+  background: #e2e2e2;
+  bottom: -160px;
+  transition: .35s;
+}
+.doc .container .main#app .bottom .add-menu .add {
+  padding: 20px;
+  float: right;
+}
+.doc .container .main#app .bottom .add-menu .add #button {
+  position: relative;
+  height: 20px;
+  width: 20px;
+  cursor: pointer;
+}
+.doc .container .main#app .bottom .add-menu .add #button:before, .doc .container .main#app .bottom .add-menu .add #button:after {
+  content: "";
+  position: absolute;
+  background: #BBB;
+  transition: .35s;
+}
+.doc .container .main#app .bottom .add-menu .add #button:before {
+  width: 2px;
+  height: 20px;
+  top: 0;
+  left: 9px;
+}
+.doc .container .main#app .bottom .add-menu .add #button:after {
+  width: 20px;
+  height: 2px;
+  top: 9px;
+  left: 0;
+}
+.doc .container .main#app .bottom .add-menu.toggled {
+  bottom: 0;
+}
+.doc .container .main#app .bottom .add-menu.toggled .add #button:after, .doc .container .main#app .bottom .add-menu.toggled .add #button:before {
+  transform: rotate(45deg);
+}
+.doc .container .main#app .bottom .add-menu h3 {
+  color: #777;
+  margin: 15px 30px;
+  line-height: 30px;
+}
+.doc .container .main#app .bottom .add-menu input {
+  width: 340px;
+  padding: 5px;
+  margin: 30px;
+  margin-top: 0;
+  margin-bottom: 20px;
+  font-size: 1.2em;
+  font-weight: 300;
+  outline: 0;
+  border: 1px solid #CCC;
+  border-radius: 4px;
+  color: #777;
+}
+.doc .container .main#app .bottom .add-menu button#add {
+  float: right;
+  margin: 0 30px;
+  background: none;
+  outline: 0;
+  border: 0;
+  color: #777;
+}
