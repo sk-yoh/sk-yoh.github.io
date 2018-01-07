@@ -9,8 +9,6 @@
 body {
   background: #4953a3;
   padding: 90px 0 0 0;
-  width: 375px;
-  height: 6675px;
 }
 
 .homepage {
@@ -25,7 +23,7 @@ body, input, button {
 
 
 header {
-  width: 375px;
+  width: 100%;
   height: 48px;
   padding: 15px;
   left: 0;
@@ -96,7 +94,7 @@ color: #61a6ff;
   right: 0;
   height: 80px;
   background: #111a55;
-  width: 375px;
+  width: 100%;
   -webkit-box-shadow: 0 4px 2px -2px rgba(92, 95, 101, 0.2);
   -moz-box-shadow: 0 4px 2px -2px rgba(92, 95, 101, 0.2);
   box-shadow: 0 4px 2px -2px rgba(92, 95, 101, 0.2);
@@ -109,7 +107,7 @@ color: #61a6ff;
   padding-right: 15px;
   top: 0;
   left: 0;
-  width:375px;
+  width: 100%;
   text-align: center;
   margin-top: 36px;
 }
@@ -153,7 +151,7 @@ h4 {
 }
 
 .tdl-add {
-  width: 375px;
+  width: 100%;
   height: 80px;
   padding: 15px;
   left: 0;
@@ -329,7 +327,7 @@ h4 {
 
 
 .tdl-add input {
-  width: 375px;
+  width: 100%;
   height: 50px;
   float: left;
   color: #fff;
